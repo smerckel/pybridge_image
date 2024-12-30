@@ -1,0 +1,60 @@
+Installing PyBridge
+===================
+
+If you want to install PyBridge, change to the directory where you unpacked the
+source tarball, then type (as root):
+
+python setup.py install
+
+Alternatively, you can run PyBridge from the extracted tarball archive. Change
+to the PyBridge 'bin/' directory, then type './pybridge' to run the graphical
+client, or './pybridge-server' to run the standalone server.
+
+PyBridge packages are available for Debian GNU/Linux and Ubuntu systems, thanks
+to David Watson <dwatson@debian.org>. Please visit:
+
+  - For Debian: http://packages.debian.org/pybridge/
+  - For Ubuntu: http://packages.ubuntu.com/pybridge/
+
+Users of Microsoft Windows may wish to use the 'py2exe' PyBridge distribution,
+which provides native executable (.exe) versions of the 'pybridge' and
+'pybridge-server' scripts, and bundles all the library software (see below)
+required to run PyBridge.
+
+
+Requirements
+============
+
+You will need the following software installed to run PyBridge:
+
+  - Python (>= 2.4) - http://www.python.org/
+  - Twisted Core (>= 2.0) - http://twistedmatrix.com/trac/wiki/TwistedCore
+  - Zope Interface (>= 3.0) - http://www.zope.org/Products/ZopeInterface
+
+
+To run the PyBridge client, the following software is also required:
+
+  - GTK+ (>= 2.8) - http://www.gtk.org/
+  - PyGTK (>= 2.8) - http://www.pygtk.org/
+  - Cairo (>= 1.0) - http://cairographics.org/
+  - PyCairo (>= 1.0) - http://cairographics.org/pycairo/
+  - ConfigObj (>= 4.0) -http://www.voidspace.org.uk/python/configobj.html 
+
+
+To run the standalone PyBridge server, the following software is also required:
+
+  - SQLObject (>= 0.7) - http://www.sqlobject.org/
+  - A database server compatible with SQLObject: see "Configuring the Server".
+
+
+Configuring the Server
+======================
+
+By default, the standalone server creates and uses a SQLite database in the
+~/.pybridge/ directory. This is suitable for hosting LAN games, but if you wish
+to operate a high-load PyBridge server on the Internet, it may be necessary
+to switch to an external database server, such as MySQL or PostgreSQL.
+
+To change the database settings, edit the ~/.pybridge/server.cfg file. The
+fields to change are documented in the pybridge/server/config.py module.
+

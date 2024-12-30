@@ -1,0 +1,3 @@
+#/bin/bash
+#podman run -ti --security-opt=label=disable -v $HOME/.pybridge:/root/.pybridge -v .:/root/pbn -p 5040:5040 pybridge run-pybridge-server.sh $@
+podman run -ti --rm --name=pybridge-server --network=podman --security-opt=label=disable -v $HOME/.pybridge:/root/.pybridge -v .:/root/pbn -p 5040:5041 pybridge run-pybridge-server.sh $@

@@ -1,0 +1,2 @@
+#!/bin/bash
+podman run --name=pybridge --rm --network=podman --security-opt=label=disable -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix pybridge pybridge

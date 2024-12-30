@@ -1,0 +1,2 @@
+#/bin/bash
+podman run -ti --rm --name=pybridge-server-debug --network=podman --security-opt=label=disable -v $HOME/.pybridge:/root/.pybridge -v .:/root/pbn -p 5040:5041 pybridge /bin/bash

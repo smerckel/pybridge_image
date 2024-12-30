@@ -1,0 +1,18 @@
+# PyBridge configuration file
+
+[Connection]
+    HostAddress = pybridge.ddns.net
+    PortNumber = 5040
+    Username = lucas
+    Password = yhpnf
+
+[Appearance]
+    SuitSymbols = True
+    Background = /root/.pybridge/baize.png
+    CardStyle = bonded.png
+    
+    [[Colours]]
+        Club = 0, 0, 0
+        Diamond = 65535, 0, 0
+        Heart = 65535, 0, 0
+        Spade = 0, 0, 0
