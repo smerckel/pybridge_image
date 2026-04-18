@@ -3,8 +3,8 @@
 [Connection]
     HostAddress = pybridge.ddns.net
     PortNumber = 5040
-    Username = lucas
-    Password = yhpnf
+    Username = luisa
+    Password = luisa 
 
 [Appearance]
     SuitSymbols = True
